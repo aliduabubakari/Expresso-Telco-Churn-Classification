@@ -107,7 +107,7 @@ The data used in this project consists of a diverse collection of sepsis cases o
 
 ## Exploratory Data Analysis
 
-During the exploratory data analysis (EDA) phase, a comprehensive investigation of the sepsis dataset was conducted to gain insights through various types of analyses.
+During the exploratory data analysis (EDA) phase, a comprehensive investigation of the churn dataset was conducted to gain insights through various types of analyses.
 
 - **Univariate analysis:** A thorough examination of each variable individually was performed. Summary statistics such as mean, median, standard deviation, and quartiles were calculated to understand the central tendency and spread of the data.
 
