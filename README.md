@@ -19,7 +19,6 @@ This solution will help this telecom company to better serve their customers by 
 - [Modeling](#modeling)
 - [Evaluation](#evaluation)
 - [Deployment](#deployment)
-- [Future Work](#future-work)
 - [Contact](#contact)
 
 
@@ -151,11 +150,6 @@ These hypotheses, along with the results of the EDA, contribute to a deeper unde
 
 ## Modeling
 
-
-<p align="center">
-  <img src="images/Modelling.png" alt="hypothesis" width="600">
-</p>
-
 During the modeling phase, the evaluation of models took into consideration the imbalanced nature of the data. The main metrics used to assess model performance were the F1 score and AUC score, which provide a balanced assessment for imbalanced datasets.
 
 The following models were evaluated:
@@ -252,10 +246,6 @@ docker run -d -p 8080:8000 your-image-name
 ```
 
 8. After running the command, the Docker container will start, and your FastAPI application will be running inside the container.
-
-<p align="center">
-  <img src="images/fastapi3.jpg" alt="Desktop Docker" width="700">
-</p>
 
 
 9. You can access your application by visiting http://localhost:host-port in your web browser or using an API testing tool.
