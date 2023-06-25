@@ -217,14 +217,6 @@ uvicorn main:app --reload
 #### API Documentation
 The API documentation provides details about the available endpoints, request and response formats, and example usage. You can access the documentation by visiting the /docs endpoint after starting the server (http://localhost:8000/docs).
 
-<p align="center">
-  <img src="images/fastapi1.jpg" alt="FastAPI" width="800">
-</p>
-
-<p align="center">
-  <img src="images/fastapi2.jpg" alt="FastAPI" width="800">
-</p>
-
 
 ### Containerized deployment 
 
@@ -329,25 +321,36 @@ Here's a step-by-step process on how to use the [FastAPI](https://abubakari-expr
 
 
 <p align="center">
-  <img src="image/fastapi0.jpg" alt="Streamlit output" width="600">
+  <img src="image/fastapi0.jpg" alt="fastapi" width="600">
 </p>
 
 <p align="center">
-  <img src="image/fastapi1.jpg" alt="Streamlit output" width="600">
+  <img src="image/fastapi1.jpg" alt="fastapi" width="600">
 </p>
 
 <p align="center">
-  <img src="image/fastapi2.jpg" alt="Streamlit output" width="600">
+  <img src="image/fastapi2.jpg" alt="fastapi" width="600">
 </p>
 
 <p align="center">
-  <img src="image/fastapi3.jpg" alt="Streamlit output" width="600">
+  <img src="image/fastapi3.jpg" alt="fastapi" width="600">
 </p>
 
 <p align="center">
-  <img src="image/fastapi4.jpg" alt="Streamlit output" width="600">
+  <img src="image/fastapi4.jpg" alt="fastapi" width="600">
 </p>
 
+## Contribution
+
+Contributions and pull requests are welcome! If you would like to contribute to this project, please follow these steps:
+
+1.Fork this repository.
+2.Create a new branch with a descriptive name
+3.Make your desired changes and commit them.
+4.Push the branch to your forked repository
+5.Open a pull request in this repository and describe your changes.
+
+Feel free to contribute to different aspects of the project, including improving the model, exploring additional features, or enhancing the EDA.
 
 ## Contact
 
