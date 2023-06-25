@@ -23,7 +23,7 @@ This solution will help this telecom company to better serve their customers by 
 - [Contact](#contact)
 
 
-## Objectives :dart
+## Objectives 🎯 :
 
 - 📌 Objective 1: Data Exploration :mag_right:
 - 📌 Objective 2: Data Preprocessing :gear:
@@ -36,7 +36,7 @@ This solution will help this telecom company to better serve their customers by 
 ## Summary
 | Code | Name                                                | Published Article                                                                                          | Deployed App                                                                                                 | Streamlit App                                                                                                |
 |------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Capstone  | Churn Prediction Classification with FastAPI and Streamlit     | [Medium Article](https://medium.com/@alidu143/deploying-fastapi-for-sepsis-occurrence-prediction-f6971aa584ff) | [FastAPI App](https://abubakari-expresso-churn-prediction-fastapi.hf.space/docs) | [Streamlit App](https://abubakari-expresso-churn-prediction-streamlit.hf.space/)                    |
+| Capstone  | Churn Prediction Classification with FastAPI and Streamlit     | [Medium Article](https://medium.com/@alidu143/expresso-telcom-churn-prediction-classification-with-fastapi-and-streamlit-d54aa98675df) | [FastAPI App](https://abubakari-expresso-churn-prediction-fastapi.hf.space/docs) | [Streamlit App](https://abubakari-expresso-churn-prediction-streamlit.hf.space/)                    |
 
 
 
@@ -81,8 +81,6 @@ The data used in this project consists of a diverse collection of sepsis cases o
 
 ## Data Fields
 
-## Data Fields
-
 | Column Name     | Data Features   | Description                                                              |
 |-----------------|-----------------|--------------------------------------------------------------------------|
 | REGION          | Categorical     | The location of each client                                               |
@@ -112,19 +110,19 @@ During the exploratory data analysis (EDA) phase, a comprehensive investigation 
 - **Univariate analysis:** A thorough examination of each variable individually was performed. Summary statistics such as mean, median, standard deviation, and quartiles were calculated to understand the central tendency and spread of the data.
 
 <p align="center">
-  <img src="images/1.jpg" alt="Univariate" width="600">
+  <img src="image/Univariate.png" alt="Univariate" width="600">
 </p>
 
 - **Bivariate analysis:** Relationships between pairs of variables were explored to identify patterns and potential predictor variables for sepsis classification.
 
 <p align="center">
-  <img src="images/2.jpg" alt="Bivariate" width="600">
+  <img src="image/Bivariate.png" alt="Bivariate" width="600">
 </p>
 
 - **Multivariate analysis:** Relationships among multiple variables were examined simultaneously, allowing for a deeper understanding of their interactions and impact on sepsis.
 
 <p align="center">
-  <img src="images/3.png" alt="multivariate" width="600">
+  <img src="image/multivariate.png" alt="multivariate" width="600">
 </p>
 
 In addition to these exploratory analyses, hypotheses were formulated based on prior knowledge and existing research. Statistical tests such as t-tests, chi-square tests, or ANOVA tests were utilized to test these hypotheses, depending on the nature of the variables. The results of these tests validated or refuted the formulated hypotheses and provided further insights into the relationships between variables.
@@ -133,7 +131,7 @@ In addition to these exploratory analyses, hypotheses were formulated based on p
 ### Hypotheses:
 
 <p align="center">
-  <img src="images/HypothesisTesting.jpg" alt="hypothesis" width="600">
+  <img src="image/hypothesis.jpg" alt="hypothesis" width="600">
 </p>
 
 
@@ -149,7 +147,7 @@ In addition to these exploratory analyses, hypotheses were formulated based on p
 
 These hypotheses, along with the results of the EDA, contribute to a deeper understanding of the dataset and provide valuable insights for further analysis and model development.
 
-
+### Business Questions:
 
 ## Modeling
 
@@ -162,22 +160,19 @@ During the modeling phase, the evaluation of models took into consideration the 
 
 The following models were evaluated:
 
-- **Decision Tree:** 
+- **Logistic Regression** 
+- **Decision Tree** 
+- **Random Forest** 
+- **Gaussian Naive Bayes**
+- **Gradient boosting**
+- **Cat boost** 
+- **XGBoost**
+- **ComplementNB**
 
-- **Logistic Regression:** 
-
-- **Naive Bayes:**
-
-- **Stochastic Gradient Descent:** 
-
-- **Random Forest:** 
-
-- **XGBoost:** 
-
-These models were evaluated based on their F1 and AUC scores, providing insights into their performance on the imbalanced dataset. Below is the results;
+These models were evaluated based on their AUC and logloss scores, providing insights into their performance on the imbalanced dataset. Below is the results;
 
 <p align="center">
-  <img src="images/results.jpg" alt="Model comparison" width="600">
+  <img src="image/results.png" alt="Model comparison" width="600">
 </p>
 
 
@@ -185,24 +180,22 @@ These models were evaluated based on their F1 and AUC scores, providing insights
 ## Evaluation
 
 <p align="center">
-  <img src="images/Evaluation.png" alt="hypothesis" width="400">
+  <img src="image/results2.png" alt="results" width="600">
 </p>
 
-Given the imbalanced nature of the data, the models' performance was assessed using the F1 score, which considers both precision and recall, providing a balanced measure of accuracy. Additionally, the AUC score was considered to evaluate the models' ability to distinguish between positive and negative cases.
 
-<p align="center">
-  <img src="images/results.png" alt="results" width="600">
-</p>
+Given the imbalanced nature of our dataset, we assessed the models' performance using the AUC metric.
 
-Hyperparameter tuning was also implemented to optimize the performance of the models. By fine-tuning the hyperparameters, it was possible to identify the best combination of parameter values that yielded the highest performance for each model. 
+- Logistic Regression and GradientBoosting models emerged as the 🏆 top-performing models, achieving the highest AUC scores.
+- ComplementNB consistently demonstrated high performance across different conditions.
+- GaussianNB had a relatively lower AUC score and higher log loss compared to other models.
+- XGBoost, CatBoost, and Random Forest models showed improved performance compared to previous conditions.
+- Decision Tree model performed relatively poorer in terms of AUC score.
+
 
 ## Deployment
 
 ### Fastapi deployment 
-
-<p align="center">
-  <img src="images/fastapi.jpg" alt="FastAPI" width="700">
-</p>
 
 1. Make sure you have FastAPI and any necessary dependencies installed. You can install FastAPI using pip:
 
@@ -291,34 +284,70 @@ streamlit run streamlit_app.py
 
 ##### App Execution on Huggingface
 
-Here's a step-by-step process on how to use the [Streamlit App](https://huggingface.co/spaces/Abubakari/Sepsis-prediction-streamlit-app) and [API Access](https://abubakari-sepsis-fastapi-prediction-app.hf.space/docs/) on Huggingface:
+Here's a step-by-step process on how to use the [Streamlit App](https://abubakari-expresso-churn-prediction-streamlit.hf.space/) on Huggingface:
 
 
 <p align="center">
-  <img src="images/streamlit_1.jpg" alt="Streamlit input" width="600">
+  <img src="image/Streamlit0.jpg" alt="Streamlit input" width="600">
 </p>
 
 <p align="center">
-  <img src="images/streamlit_2.jpg" alt="Streamlit input" width="600">
+  <img src="image/Streamlit1.jpg" alt="Streamlit input" width="600">
 </p>
 
 <p align="center">
-  <img src="images/streamlit_3.jpg" alt="streamlit input" width="600">
+  <img src="image/Streamlit2.jpg" alt="Streamlit input" width="600">
 </p>
 
 <p align="center">
-  <img src="images/streamlit_5.jpg" alt="streamlit results" width="600">
+  <img src="image/Streamlit3.jpg" alt="Streamlit input" width="600">
 </p>
-
-
-## Future Work
 
 <p align="center">
-  <img src="images/R.png" alt="sepsis solution recommendation" width="600">
+  <img src="image/Streamlit4.jpg" alt="Streamlit input" width="600">
 </p>
 
+<p align="center">
+  <img src="image/Streamlit5.jpg" alt="Streamlit output" width="600">
+</p>
 
-For future work, incorporating clustering algorithms can be a valuable addition to sepsis identification and classification. Clustering algorithms can help in grouping similar patient data together based on patterns and similarities.
+<p align="center">
+  <img src="image/Streamlit6.jpg" alt="Streamlit output" width="600">
+</p>
+
+<p align="center">
+  <img src="image/Streamlit7.jpg" alt="Streamlit output" width="600">
+</p>
+
+<p align="center">
+  <img src="image/Streamlit8.jpg" alt="Streamlit output" width="600">
+</p>
+
+##### Fastapi on Huggingface
+
+Here's a step-by-step process on how to use the [FastAPI](https://abubakari-expresso-churn-prediction-fastapi.hf.space/docs) on Huggingface:
+
+
+<p align="center">
+  <img src="image/fastapi0.jpg" alt="Streamlit output" width="600">
+</p>
+
+<p align="center">
+  <img src="image/fastapi1.jpg" alt="Streamlit output" width="600">
+</p>
+
+<p align="center">
+  <img src="image/fastapi2.jpg" alt="Streamlit output" width="600">
+</p>
+
+<p align="center">
+  <img src="image/fastapi3.jpg" alt="Streamlit output" width="600">
+</p>
+
+<p align="center">
+  <img src="image/fastapi4.jpg" alt="Streamlit output" width="600">
+</p>
+
 
 ## Contact
 
