@@ -294,15 +294,15 @@ Here's a step-by-step process on how to use the [Streamlit App](https://abubakar
 </p>
 
 <p align="center">
-  <img src="image/Streamlit6.jpg" alt="Streamlit output" width="600">
+  <img src="image/Streamlit6.png" alt="Streamlit output" width="600">
 </p>
 
 <p align="center">
-  <img src="image/Streamlit7.jpg" alt="Streamlit output" width="600">
+  <img src="image/Streamlit7.png" alt="Streamlit output" width="600">
 </p>
 
 <p align="center">
-  <img src="image/Streamlit8.jpg" alt="Streamlit output" width="600">
+  <img src="image/Streamlit8.png" alt="Streamlit output" width="600">
 </p>
 
 ##### Fastapi on Huggingface
